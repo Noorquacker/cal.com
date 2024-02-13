@@ -24,7 +24,7 @@ export default function Exchange2013CalendarSetup() {
       <div className="bg-default m-auto rounded p-5 md:w-[560px] md:p-10">
         <div>
           <img
-            src="/api/app-store/exchange2013calendar/icon.svg"
+            src="/calendso/api/app-store/exchange2013calendar/icon.svg"
             alt="Exchange 2013 Calendar"
             className="h-12 w-12 max-w-2xl"
           />
@@ -37,7 +37,7 @@ export default function Exchange2013CalendarSetup() {
               form={form}
               handleSubmit={async (values) => {
                 setErrorMessage("");
-                const res = await fetch("/api/integrations/exchange2013calendar/add", {
+                const res = await fetch("/calendso/api/integrations/exchange2013calendar/add", {
                   method: "POST",
                   body: JSON.stringify(values),
                   headers: {

@@ -127,10 +127,14 @@ function AlbySetupPage(props: IAlbySetupProps) {
 
   const albyIcon = (
     <>
-      <img className="h-12 w-12 dark:hidden" src="/api/app-store/alby/icon-borderless.svg" alt="Alby Icon" />
+      <img
+        className="h-12 w-12 dark:hidden"
+        src="/calendso/api/app-store/alby/icon-borderless.svg"
+        alt="Alby Icon"
+      />
       <img
         className="hidden h-12 w-12 dark:block"
-        src="/api/app-store/alby/icon-borderless-dark.svg"
+        src="/calendso/api/app-store/alby/icon-borderless-dark.svg"
         alt="Alby Icon"
       />
     </>

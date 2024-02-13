@@ -33,7 +33,7 @@ export const SearchDialog = (props: ISearchDialog) => {
     }
     setIsPending(true);
     setErrorMessage("");
-    const res = await fetch("/api/integrations/giphy/search", {
+    const res = await fetch("/calendso/api/integrations/giphy/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export const SearchDialog = (props: ISearchDialog) => {
     }
     setIsPending(true);
     setErrorMessage("");
-    const res = await fetch("/api/integrations/giphy/get", {
+    const res = await fetch("/calendso/api/integrations/giphy/get", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -206,7 +206,9 @@ test.describe("Webhook tests", async () => {
       await page.goto("/bookings/unconfirmed");
       await page.click('[data-testid="reject"]');
       await page.click('[data-testid="rejection-confirm"]');
-      await page.waitForResponse((response) => response.url().includes("/api/trpc/bookings/confirm"));
+      await page.waitForResponse((response) =>
+        response.url().includes("/calendso/api/trpc/bookings/confirm")
+      );
 
       await webhookReceiver.waitForRequestCount(1);
 

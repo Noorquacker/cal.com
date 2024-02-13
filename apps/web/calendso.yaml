@@ -38,13 +38,13 @@ paths:
       summary: Displays the sign in page
       tags:
         - Authentication
-  "/api/auth/signin/:provider":
+  "/calendso/api/auth/signin/:provider":
     post:
       description: Starts an OAuth signin flow for the specified provider. The POST submission requires CSRF token from /api/auth/csrf.
       summary: Starts an OAuth signin flow for the specified provider
       tags:
         - Authentication
-  "/api/auth/callback/:provider":
+  "/calendso/api/auth/callback/:provider":
     get:
       description: "Handles returning requests from OAuth services during sign in. For OAuth 2.0 providers that support the state option, the value of the state parameter is checked against the one that was generated when the sign in flow was started - this uses a hash of the CSRF token which MUST match for both the POST and GET calls during sign in."
       summary: Handles returning requests from OAuth services
@@ -224,7 +224,7 @@ paths:
                   type: string
                 integration:
                   type: string
-  "/api/book/event":
+  "/calendso/api/book/event":
     post:
       description: Creates a booking in the user's calendar.
       summary: Creates a booking for a user
@@ -579,7 +579,7 @@ paths:
                 properties:
                   message:
                     type: string
-  "/api/{team}":
+  "/calendso/api/{team}":
     delete:
       description: Deletes a team
       summary: Deletes a team
@@ -614,7 +614,7 @@ paths:
         in: path
         required: true
         description: The team which you wish to modify
-  "/api/{team}/invite":
+  "/calendso/api/{team}/invite":
     post:
       description: Invites someone to a team.
       summary: Invites someone to a team
@@ -639,7 +639,7 @@ paths:
         in: path
         required: true
         description: The team which you wish to send the invite for
-  "/api/{team}/membership":
+  "/calendso/api/{team}/membership":
     get:
       description: Lists the members of a team.
       summary: Lists members of a team

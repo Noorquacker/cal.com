@@ -45,17 +45,17 @@ const nextConfig = {
         // This redirects requests recieved at / the root to the /api/ folder.
         {
           source: "/v:version/:rest*",
-          destination: "/api/v:version/:rest*",
+          destination: "/calendso/api/v:version/:rest*",
         },
         // This redirects requests to api/v*/ to /api/ passing version as a query parameter.
         {
-          source: "/api/v:version/:rest*",
-          destination: "/api/:rest*?version=:version",
+          source: "/calendso/api/v:version/:rest*",
+          destination: "/calendso/api/:rest*?version=:version",
         },
         // Keeps backwards compatibility with old webhook URLs
         {
-          source: "/api/hooks/:rest*",
-          destination: "/api/webhooks/:rest*",
+          source: "/calendso/api/hooks/:rest*",
+          destination: "/calendso/api/webhooks/:rest*",
         },
       ],
       fallback: [
@@ -78,5 +78,7 @@ if (!!process.env.NEXT_PUBLIC_SENTRY_DSN) {
 
   plugins.push(withSentryConfig);
 }
+
+nextConfig["basePath"] = "/calendso";
 
 module.exports = () => plugins.reduce((acc, next) => next(acc), nextConfig);

@@ -39,7 +39,11 @@ export default function SendgridSetup() {
       <div className="bg-default m-auto rounded p-5 md:w-[520px] md:p-10">
         <div className="flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0">
           <div>
-            <img src="/api/app-store/sendgrid/logo.png" alt="Sendgrid" className="h-12 w-12 max-w-2xl" />
+            <img
+              src="/calendso/api/app-store/sendgrid/logo.png"
+              alt="Sendgrid"
+              className="h-12 w-12 max-w-2xl"
+            />
           </div>
           <div>
             <h1 className="text-default">{t("provide_api_key")}</h1>
@@ -59,7 +63,7 @@ export default function SendgridSetup() {
               <Form
                 form={form}
                 handleSubmit={async (values) => {
-                  const res = await fetch("/api/integrations/sendgrid/add", {
+                  const res = await fetch("/calendso/api/integrations/sendgrid/add", {
                     method: "POST",
                     body: JSON.stringify(values),
                     headers: {
@@ -116,7 +120,7 @@ export default function SendgridSetup() {
                       if (!check) return;
                       const api_key = form.getValues("api_key");
                       setTestLoading(true);
-                      const res = await fetch("/api/integrations/sendgrid/check", {
+                      const res = await fetch("/calendso/api/integrations/sendgrid/check", {
                         method: "POST",
                         body: JSON.stringify({ api_key }),
                         headers: {

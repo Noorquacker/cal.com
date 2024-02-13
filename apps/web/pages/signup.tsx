@@ -203,7 +203,7 @@ export default function Signup({
   const isOrgInviteByLink = orgSlug && !prepopulateFormValues?.username;
 
   const signUp: SubmitHandler<FormValues> = async (data) => {
-    await fetch("/api/auth/signup", {
+    await fetch("/calendso/api/auth/signup", {
       body: JSON.stringify({
         ...data,
         language: i18n.language,

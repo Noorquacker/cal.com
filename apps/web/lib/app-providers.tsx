@@ -284,8 +284,8 @@ const AppProviders = (props: AppPropsWithChildren) => {
   };
 
   const RemainingProviders = (
-    <EventCollectionProvider options={{ apiPath: "/api/collect-events" }}>
-      <SessionProvider session={pageProps.session ?? undefined}>
+    <EventCollectionProvider options={{ apiPath: "/calendso/api/collect-events" }}>
+      <SessionProvider session={pageProps.session ?? undefined} basePath="/calendso/api/auth">
         <CustomI18nextProvider {...propsWithoutNonce}>
           <TooltipProvider>
             {/* color-scheme makes background:transparent not work which is required by embed. We need to ensure next-theme adds color-scheme to `body` instead of `html`(https://github.com/pacocoursey/next-themes/blob/main/src/index.tsx#L74). Once that's done we can enable color-scheme support */}

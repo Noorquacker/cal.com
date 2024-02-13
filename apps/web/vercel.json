@@ -1,7 +1,7 @@
 {
   "crons": [
     {
-      "path": "/api/cron/calendar-cache-cleanup",
+      "path": "/calendso/api/cron/calendar-cache-cleanup",
       "schedule": "0 5 * * *"
     }
   ],

@@ -76,7 +76,7 @@ export const nextCollectBasicSettings: CollectOpts = {
     { "*.map": null },
     { "*.png": null },
     { "*.gif": null },
-    { "/api/collect-events": null },
+    { "/calendso/api/collect-events": null },
     { "/api*": null },
     { "/img*": null },
     { "/favicon*": null },

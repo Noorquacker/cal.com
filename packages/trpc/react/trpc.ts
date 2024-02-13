@@ -53,7 +53,7 @@ export const trpc = createTRPCNext<AppRouter, NextPageContext>({
   config() {
     const url =
       typeof window !== "undefined"
-        ? "/api/trpc"
+        ? "/calendso/api/trpc"
         : process.env.VERCEL_URL
         ? `https://${process.env.VERCEL_URL}/api/trpc`
         : `${process.env.NEXT_PUBLIC_WEBAPP_URL}/api/trpc`;

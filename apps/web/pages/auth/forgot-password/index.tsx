@@ -31,7 +31,7 @@ export default function ForgotPassword(props: inferSSRProps<typeof getServerSide
 
   const submitForgotPasswordRequest = async ({ email }: { email: string }) => {
     try {
-      const res = await fetch("/api/auth/forgot-password", {
+      const res = await fetch("/calendso/api/auth/forgot-password", {
         method: "POST",
         body: JSON.stringify({ email }),
         headers: {

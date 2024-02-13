@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="/api/logo?type=mstile"/>
+            <square150x150logo src="/calendso/api/logo?type=mstile"/>
             <TileColor>#ff0000</TileColor>
         </tile>
     </msapplication>

@@ -30,7 +30,7 @@ const CalendarSwitch = (props: ICalendarSwitchProps) => {
       };
 
       if (isOn) {
-        const res = await fetch("/api/availability/calendar", {
+        const res = await fetch("/calendso/api/availability/calendar", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -26,7 +26,7 @@ export default function AppleCalendarSetup() {
           <div>
             {/* eslint-disable @next/next/no-img-element */}
             <img
-              src="/api/app-store/applecalendar/icon.svg"
+              src="/calendso/api/app-store/applecalendar/icon.svg"
               alt="Apple Calendar"
               className="h-12 w-12 max-w-2xl"
             />
@@ -52,7 +52,7 @@ export default function AppleCalendarSetup() {
                 form={form}
                 handleSubmit={async (values) => {
                   setErrorMessage("");
-                  const res = await fetch("/api/integrations/applecalendar/add", {
+                  const res = await fetch("/calendso/api/integrations/applecalendar/add", {
                     method: "POST",
                     body: JSON.stringify(values),
                     headers: {

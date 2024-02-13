@@ -3,12 +3,12 @@
     "short_name": "Cal.com",
     "icons": [
         {
-            "src": "/api/logo?type=android-chrome-192",
+            "src": "/calendso/api/logo?type=android-chrome-192",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/api/logo?type=android-chrome-256",
+            "src": "/calendso/api/logo?type=android-chrome-256",
             "sizes": "256x256",
             "type": "image/png"
         }

@@ -32,7 +32,7 @@ const ChangePasswordSection = () => {
     setErrorMessage(null);
 
     try {
-      const response = await fetch("/api/auth/changepw", {
+      const response = await fetch("/calendso/api/auth/changepw", {
         method: "PATCH",
         body: JSON.stringify({ oldPassword, newPassword }),
         headers: {

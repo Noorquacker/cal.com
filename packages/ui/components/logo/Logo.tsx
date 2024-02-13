@@ -5,7 +5,7 @@ export default function Logo({
   icon,
   inline = true,
   className,
-  src = "/api/logo",
+  src = "/calendso/api/logo",
 }: {
   small?: boolean;
   icon?: boolean;

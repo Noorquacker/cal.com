@@ -263,7 +263,7 @@ testBothFutureAndLegacyRoutes.describe("Teams - NonOrg", (routeVariant) => {
       expect(page.locator(`[data-testid=make-team-private-check][data-state="checked"]`)).toBeVisible(),
       // according to switch implementation, checked state can be set before mutation is resolved
       // so we need to await for req to resolve
-      page.waitForResponse((res) => res.url().includes("/api/trpc/teams/update")),
+      page.waitForResponse((res) => res.url().includes("/calendso/api/trpc/teams/update")),
     ]);
 
     // Go to Team's page

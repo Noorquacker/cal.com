@@ -23,7 +23,7 @@ export type PageMetadataRecipe = Readonly<{
 export const prepareRootMetadata = (recipe: RootMetadataRecipe): Metadata => ({
   icons: {
     icon: "/favicon.icon",
-    apple: "/api/logo?type=apple-touch-icon",
+    apple: "/calendso/api/logo?type=apple-touch-icon",
     other: [
       {
         rel: "icon-mask",
@@ -31,12 +31,12 @@ export const prepareRootMetadata = (recipe: RootMetadataRecipe): Metadata => ({
         color: "#000000",
       },
       {
-        url: "/api/logo?type=favicon-16",
+        url: "/calendso/api/logo?type=favicon-16",
         sizes: "16x16",
         type: "image/png",
       },
       {
-        url: "/api/logo?type=favicon-32",
+        url: "/calendso/api/logo?type=favicon-32",
         sizes: "32x32",
         type: "image/png",
       },

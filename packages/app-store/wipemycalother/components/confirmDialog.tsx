@@ -26,7 +26,7 @@ const wipeMyCalAction = async (props: IWipeMyCalAction) => {
     endDate,
   };
   try {
-    const endpoint = "/api/integrations/wipemycalother/wipe";
+    const endpoint = "/calendso/api/integrations/wipemycalother/wipe";
     return fetch(`${process.env.NEXT_PUBLIC_WEBAPP_URL}${endpoint}`, {
       method: "POST",
       headers: {

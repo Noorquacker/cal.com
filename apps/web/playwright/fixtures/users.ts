@@ -785,7 +785,7 @@ async function confirmPendingPayment(page: Page) {
     secret: process.env.STRIPE_WEBHOOK_SECRET as string,
   });
 
-  const response = await page.request.post("/api/integrations/stripepayment/webhook", {
+  const response = await page.request.post("/calendso/api/integrations/stripepayment/webhook", {
     data: payload,
     headers: { "stripe-signature": signature },
   });
@@ -821,7 +821,7 @@ export async function apiLogin(
 ) {
   const csrfToken = await page
     .context()
-    .request.get("/api/auth/csrf")
+    .request.get("/calendso/api/auth/csrf")
     .then((response) => response.json())
     .then((json) => json.csrfToken);
   const data = {
@@ -832,7 +832,7 @@ export async function apiLogin(
     json: "true",
     csrfToken,
   };
-  return page.context().request.post("/api/auth/callback/credentials", {
+  return page.context().request.post("/calendso/api/auth/callback/credentials", {
     data,
   });
 }

@@ -14,7 +14,7 @@ const saveSettings = async ({
   sleepValue: number;
 }) => {
   try {
-    const response = await fetch("/api/integrations/vital/save", {
+    const response = await fetch("/calendso/api/integrations/vital/save", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -51,7 +51,7 @@ const AppConfiguration = (props: IAppConfigurationProps) => {
   const [saveLoading, setSaveLoading] = useState(false);
   useEffect(() => {
     async function getVitalsConfig() {
-      const response = await fetch("/api/integrations/vital/settings", {
+      const response = await fetch("/calendso/api/integrations/vital/settings", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

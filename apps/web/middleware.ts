@@ -58,11 +58,11 @@ const middleware = async (req: NextRequest): Promise<NextResponse<unknown>> => {
     return res;
   }
 
-  if (url.pathname.startsWith("/api/trpc/")) {
+  if (url.pathname.startsWith("/calendso/api/trpc/")) {
     requestHeaders.set("x-cal-timezone", req.headers.get("x-vercel-ip-timezone") ?? "");
   }
 
-  if (url.pathname.startsWith("/api/auth/signup")) {
+  if (url.pathname.startsWith("/calendso/api/auth/signup")) {
     const isSignupDisabled = await safeGet<boolean>("isSignupDisabled");
     // If is in maintenance mode, point the url pathname to the maintenance page
     if (isSignupDisabled) {
@@ -124,8 +124,8 @@ export const config = {
   // https://github.com/vercel/next.js/discussions/42458
   matcher: [
     "/:path*/embed",
-    "/api/auth/signup",
-    "/api/trpc/:path*",
+    "/calendso/api/auth/signup",
+    "/calendso/api/trpc/:path*",
     "/login",
     "/auth/login",
     "/future/auth/login",

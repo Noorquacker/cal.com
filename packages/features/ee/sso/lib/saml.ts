@@ -9,8 +9,8 @@ export const isSAMLLoginEnabled = samlDatabaseUrl.length > 0;
 export const samlTenantID = "Cal.com";
 export const samlProductID = "Cal.com";
 export const samlAudience = "https://saml.cal.com";
-export const samlPath = "/api/auth/saml/callback";
-export const oidcPath = "/api/auth/oidc";
+export const samlPath = "/calendso/api/auth/saml/callback";
+export const oidcPath = "/calendso/api/auth/oidc";
 export const clientSecretVerifier = process.env.SAML_CLIENT_SECRET_VERIFIER || "dummy";
 
 export const hostedCal = Boolean(HOSTED_CAL_FEATURES);

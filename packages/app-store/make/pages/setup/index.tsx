@@ -69,7 +69,7 @@ export default function MakeSetup({ inviteLink }: InferGetServerSidePropsType<ty
         <div className="bg-default m-auto max-w-[43em] overflow-auto rounded pb-10 md:p-10">
           <div className="md:flex md:flex-row">
             <div className="invisible md:visible">
-              <img className="h-11" src="/api/app-store/make/icon.svg" alt="Make Logo" />
+              <img className="h-11" src="/calendso/api/app-store/make/icon.svg" alt="Make Logo" />
             </div>
             <div className="ml-2 ltr:mr-2 rtl:ml-2 md:ml-5">
               <div className="text-default">{t("setting_up_make")}</div>

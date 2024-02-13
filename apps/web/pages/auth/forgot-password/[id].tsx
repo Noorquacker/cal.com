@@ -27,7 +27,7 @@ export default function Page({ requestId, isRequestExpired, csrfToken }: Props) 
   const isEmpty = passwordValue?.length === 0;
 
   const submitChangePassword = async ({ password, requestId }: { password: string; requestId: string }) => {
-    const res = await fetch("/api/auth/reset-password", {
+    const res = await fetch("/calendso/api/auth/reset-password", {
       method: "POST",
       body: JSON.stringify({ requestId, password }),
       headers: {

@@ -207,17 +207,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  webpack: (config, { webpack, buildId, isServer }) => {
-    if (isServer) {
-      // Module not found fix @see https://github.com/boxyhq/jackson/issues/1535#issuecomment-1704381612
-      config.plugins.push(
-        new webpack.IgnorePlugin({
-          resourceRegExp:
-            /(^@google-cloud\/spanner|^@mongodb-js\/zstd|^@sap\/hana-client\/extension\/Stream$|^@sap\/hana-client|^@sap\/hana-client$|^aws-crt|^aws4$|^better-sqlite3$|^bson-ext$|^cardinal$|^cloudflare:sockets$|^hdb-pool$|^ioredis$|^kerberos$|^mongodb-client-encryption$|^mysql$|^oracledb$|^pg-native$|^pg-query-stream$|^react-native-sqlite-storage$|^snappy\/package\.json$|^snappy$|^sql.js$|^sqlite3$|^typeorm-aurora-data-api-driver$)/,
-        })
-      );
-    }
-
+  webpack: (config, { webpack, buildId }) => {
     config.plugins.push(
       new CopyWebpackPlugin({
         patterns: [
@@ -309,18 +299,18 @@ const nextConfig = {
       },
       {
         source: "/org/:orgSlug/avatar.png",
-        destination: "/api/user/avatar?orgSlug=:orgSlug",
+        destination: "/calendso/api/user/avatar?orgSlug=:orgSlug",
       },
       {
         source: "/team/:teamname/avatar.png",
-        destination: "/api/user/avatar?teamname=:teamname",
+        destination: "/calendso/api/user/avatar?teamname=:teamname",
       },
 
       // When updating this also update pagesAndRewritePaths.js
       ...[
         {
           source: "/:user/avatar.png",
-          destination: "/api/user/avatar?username=:user",
+          destination: "/calendso/api/user/avatar?username=:user",
         },
         {
           source: "/forms/:formQuery*",
@@ -436,7 +426,7 @@ const nextConfig = {
   async redirects() {
     const redirects = [
       {
-        source: "/api/app-store/:path*",
+        source: "/calendso/api/app-store/:path*",
         destination: "/app-store/:path*",
         permanent: true,
       },
@@ -488,7 +478,7 @@ const nextConfig = {
       },
       /* Attempt to mitigate DDoS attack */
       {
-        source: "/api/auth/:path*",
+        source: "/calendso/api/auth/:path*",
         has: [
           {
             type: "query",
@@ -502,7 +492,8 @@ const nextConfig = {
       },
       {
         source: "/booking/direct/:action/:email/:bookingUid/:oldToken",
-        destination: "/api/link?action=:action&email=:email&bookingUid=:bookingUid&oldToken=:oldToken",
+        destination:
+          "/calendso/api/link?action=:action&email=:email&bookingUid=:bookingUid&oldToken=:oldToken",
         permanent: true,
       },
       {
@@ -547,7 +538,7 @@ const nextConfig = {
                   value: "localhost:3000",
                 },
               ],
-              source: "/api/integrations/:args*",
+              source: "/calendso/api/integrations/:args*",
               destination: `${process.env.NEXT_PUBLIC_WEBAPP_URL}/api/integrations/:args*`,
               permanent: false,
             },
@@ -589,5 +580,7 @@ if (!!process.env.NEXT_PUBLIC_SENTRY_DSN) {
 
   plugins.push(withSentryConfig);
 }
+
+nextConfig["basePath"] = "/calendso";
 
 module.exports = () => plugins.reduce((acc, next) => next(acc), nextConfig);

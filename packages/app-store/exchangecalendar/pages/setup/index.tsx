@@ -64,7 +64,7 @@ export default function ExchangeSetup() {
             <div>
               {/* eslint-disable @next/next/no-img-element */}
               <img
-                src="/api/app-store/exchangecalendar/icon.svg"
+                src="/calendso/api/app-store/exchangecalendar/icon.svg"
                 alt="Microsoft Exchange"
                 className="h-12 w-12 max-w-2xl"
               />
@@ -77,7 +77,7 @@ export default function ExchangeSetup() {
                   form={form}
                   handleSubmit={async (values) => {
                     setErrorMessage("");
-                    const res = await fetch("/api/integrations/exchangecalendar/add", {
+                    const res = await fetch("/calendso/api/integrations/exchangecalendar/add", {
                       method: "POST",
                       body: JSON.stringify(values),
                       headers: {

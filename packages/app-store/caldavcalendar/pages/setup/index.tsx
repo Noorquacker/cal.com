@@ -27,7 +27,7 @@ export default function CalDavCalendarSetup() {
           <div>
             {/* eslint-disable @next/next/no-img-element */}
             <img
-              src="/api/app-store/caldavcalendar/icon.svg"
+              src="/calendso/api/app-store/caldavcalendar/icon.svg"
               alt="CalDav Calendar"
               className="h-12 w-12 max-w-2xl"
             />
@@ -40,7 +40,7 @@ export default function CalDavCalendarSetup() {
                 form={form}
                 handleSubmit={async (values) => {
                   setErrorMessage("");
-                  const res = await fetch("/api/integrations/caldavcalendar/add", {
+                  const res = await fetch("/calendso/api/integrations/caldavcalendar/add", {
                     method: "POST",
                     body: JSON.stringify(values),
                     headers: {

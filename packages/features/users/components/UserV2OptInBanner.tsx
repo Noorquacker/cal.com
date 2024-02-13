@@ -26,7 +26,7 @@ function UserV2OptInBanner() {
         text={`You're using the future version of ${APP_NAME}.`}
         variant="warning"
         actions={
-          <a href="/api/future-opt-in" className="border-b border-b-black">
+          <a href="/calendso/api/future-opt-in" className="border-b border-b-black">
             Go back
           </a>
         }
@@ -38,7 +38,7 @@ function UserV2OptInBanner() {
       text={`Want to try the future version of ${APP_NAME}? (Only Cal.com admins can see this)`}
       variant="warning"
       actions={
-        <a href="/api/future-opt-in" className="border-b border-b-black">
+        <a href="/calendso/api/future-opt-in" className="border-b border-b-black">
           Opt-in to future routes
         </a>
       }
