@@ -118,7 +118,7 @@ const PremiumTextfield = (props: ICustomUsernameProps) => {
 
   const usernameFromStripe = stripeCustomer?.username;
 
-  const paymentLink = `/api/integrations/stripepayment/subscription?intentUsername=${
+  const paymentLink = `/calendso/api/integrations/stripepayment/subscription?intentUsername=${
     inputUsernameValue || usernameFromStripe
   }&action=${usernameChangeCondition}&callbackUrl=${WEBAPP_URL}${pathname}`;
 

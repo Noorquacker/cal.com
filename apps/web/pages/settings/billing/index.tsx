@@ -38,7 +38,7 @@ const BillingView = () => {
   const { t } = useLocale();
   const { open } = useIntercom();
   const returnTo = pathname;
-  const billingHref = `/api/integrations/stripepayment/portal?returnTo=${WEBAPP_URL}${returnTo}`;
+  const billingHref = `/calendso/api/integrations/stripepayment/portal?returnTo=${WEBAPP_URL}${returnTo}`;
 
   const onContactSupportClick = async () => {
     await open();

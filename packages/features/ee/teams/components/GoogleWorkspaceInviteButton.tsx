@@ -108,7 +108,7 @@ export function GoogleWorkspaceInviteButton(
         const params = new URLSearchParams({
           teamId: teamId.toString(),
         });
-        const res = await fetch(`/api/teams/googleworkspace/add?${params}`);
+        const res = await fetch(`/calendso/api/teams/googleworkspace/add?${params}`);
 
         if (!res.ok) {
           const errorBody = await res.json();

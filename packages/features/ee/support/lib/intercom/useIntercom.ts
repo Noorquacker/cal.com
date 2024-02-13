@@ -29,7 +29,7 @@ export const useIntercom = () => {
   const open = async () => {
     let userHash;
 
-    const req = await fetch(`/api/intercom-hash`);
+    const req = await fetch(`/calendso/api/intercom-hash`);
     const res = await req.json();
     if (res?.hash) {
       userHash = res.hash;

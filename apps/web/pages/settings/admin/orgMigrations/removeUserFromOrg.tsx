@@ -55,7 +55,7 @@ export default function RemoveUserFromOrg() {
         className="space-y-6"
         handleSubmit={async (values) => {
           setState(State.LOADING);
-          const res = await fetch(`/api/orgMigration/removeUserFromOrg`, {
+          const res = await fetch(`/calendso/api/orgMigration/removeUserFromOrg`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

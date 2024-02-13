@@ -49,7 +49,7 @@ test.describe("UploadAvatar", async () => {
 
       await expect(src).toContain(response.objectKey);
 
-      const urlResponse = await page.request.get(`/api/avatar/${response.objectKey}.png`, {
+      const urlResponse = await page.request.get(`/calendso/api/avatar/${response.objectKey}.png`, {
         maxRedirects: 0,
       });
 

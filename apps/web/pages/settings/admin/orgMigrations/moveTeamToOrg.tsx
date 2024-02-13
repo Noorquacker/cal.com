@@ -70,7 +70,7 @@ export default function MoveTeamToOrg() {
         form={formMethods}
         handleSubmit={async (values) => {
           setState(State.LOADING);
-          const res = await fetch(`/api/orgMigration/moveTeamToOrg`, {
+          const res = await fetch(`/calendso/api/orgMigration/moveTeamToOrg`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

@@ -88,7 +88,7 @@ export default function MoveUserToOrg() {
         className="space-y-6"
         handleSubmit={async (values) => {
           setState(State.LOADING);
-          const res = await fetch(`/api/orgMigration/moveUserToOrg`, {
+          const res = await fetch(`/calendso/api/orgMigration/moveUserToOrg`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

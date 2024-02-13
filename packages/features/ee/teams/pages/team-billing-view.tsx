@@ -11,7 +11,7 @@ const BillingView = () => {
   const pathname = usePathname();
   const { t } = useLocale();
   const returnTo = pathname;
-  const billingHref = `/api/integrations/stripepayment/portal?returnTo=${WEBAPP_URL}${returnTo}`;
+  const billingHref = `/calendso/api/integrations/stripepayment/portal?returnTo=${WEBAPP_URL}${returnTo}`;
   return (
     <>
       <Meta title={t("billing")} description={t("team_billing_description")} borderInShellHeader={true} />

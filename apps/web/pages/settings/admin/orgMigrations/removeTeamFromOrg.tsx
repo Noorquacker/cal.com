@@ -60,7 +60,7 @@ export default function RemoveTeamFromOrg() {
         className="space-y-6"
         handleSubmit={async (values) => {
           setState(State.LOADING);
-          const res = await fetch(`/api/orgMigration/removeTeamFromOrg`, {
+          const res = await fetch(`/calendso/api/orgMigration/removeTeamFromOrg`, {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

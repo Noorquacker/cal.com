@@ -63,7 +63,7 @@ const nextConfig = {
         // and dynamic routes are checked
         {
           source: "/:path*",
-          destination: `/api/:path*`,
+          destination: `/calendso/api/:path*`,
         },
       ],
     };

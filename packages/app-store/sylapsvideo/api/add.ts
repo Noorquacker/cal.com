@@ -6,7 +6,7 @@ import getInstalledAppPath from "../../_utils/getInstalledAppPath";
 import config from "../config.json";
 
 /**
- * This is an example endpoint for an app, these will run under `/api/integrations/[...args]`
+ * This is an example endpoint for an app, these will run under `/calendso/api/integrations/[...args]`
  * @param req
  * @param res
  */
